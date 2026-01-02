@@ -1,0 +1,3 @@
+right now in the starting stage, I'm focusing on building the logic of the game in bare cpp
+after the functional requirements are done, then I'll think about the non functional requirements or enhancements...
+
