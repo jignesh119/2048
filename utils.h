@@ -89,7 +89,6 @@ std::ostream &operator<<(std::ostream &os, const std::map<S, T> &p) {
 
 // some helper templates inside the "utils" namespace
 namespace utils {
-// Debug print helpers
 template <class T> void dbs(std::string str, T t) {
   std::cerr << str << " : " << t << "\n";
 }

@@ -29,13 +29,47 @@ void slide(vi &row) {
     row.push_back(0);
 }
 
+struct Game {
+  vector<vector<int>> board;
+  Game() : board(4, vector<int>(4)) {
+    random_populate();
+    random_populate();
+  }
+  bool has_game_ended() {
+    for (auto &row : board)
+      for (auto &cell : row)
+        if (cell == 0)
+          return false;
+    return true;
+  }
+  void random_populate() {
+    while (!has_game_ended() && 1) {
+      int r = rand() % 4, c = rand() % 4;
+      if (board[r][c] == 0) {
+        if (rand() % 2)
+          board[r][c] = 4;
+        else
+          board[r][c] = 2;
+        return;
+      }
+    }
+  }
+  void move_up() {}
+  void move_down() {}
+  void move_right() {}
+  void move_left() {}
+};
+
 signed main() {
-  freopen("board.inp", "r", stdin);
-  freopen("board.res", "w", stderr);
-  vi row(4);
-  for (auto &x : row)
-    cin >> x;
-  pr(row);
-  slide(row);
-  pr(row);
+  // freopen("board.inp", "r", stdin);
+  // freopen("board.res", "w", stderr);
+  // vi row(4);
+  // for (auto &x : row)
+  //   cin >> x;
+  // pr(row);
+  // slide(row);
+  // pr(row);
+  srand(time(0));
+  Game mygame;
+  cout << mygame.board;
 }
