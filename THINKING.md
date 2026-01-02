@@ -15,3 +15,6 @@ part1: sliding the board in the best possible way.
 generic slide function that slides the given input column/row to right side
 and returns final list/row/column
 imma write this simple functionality...
+
+so for refactoring, I think I'm not leveraging cpp features or
+optimisations good enough so Imma see learncpp.com for now and see if I can make any modifications
