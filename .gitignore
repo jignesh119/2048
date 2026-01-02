@@ -40,5 +40,3 @@
 # debug information files
 *.dwo
 
-# read from input file when debuggin
-ip.txt
